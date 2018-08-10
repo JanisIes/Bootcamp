@@ -13,5 +13,22 @@ const loadStarWars = () => {
     event.preventDefault();
     console.log(event.target.getAttribute("href"));
     $(event.target).attr('href');
-
+};
+const validationForm = () => {
+    event.preventDefault();
+    const arrayOfInputs = document.getElementsByTagName("input");
+    let isError = false;
+    const information = {};
+    for (let i = 0; i < arrayOfInputs.length; i++) {
+        const input = arrayOfInputs[i];
+        if (!input.value) {
+            input.style.borderColor = 'red';
+            isError = true;
+        } else {
+            input.style.borderColor = 'initial';
+            isError = false;
+            information[input.name] = input.value;
+        }
+    }
+    return !isError;
 };
