@@ -17,11 +17,7 @@ const validationForm = () => {
     return !isError;
 };
 
-var bunchOfUrls = {
-    people :"https://swapi.co/api/people/",
-    planets :"https://swapi.co/api/planets/",
-    spaceships :"https://swapi.co/api/spaceships/"
-};
+
 
 /**
  * Function to make an AJAX request by provided parameters and return a string
