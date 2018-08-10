@@ -5,13 +5,6 @@ const update = data => {
     $("#species_link").attr("href", data["species"]);
     $("#starships_link").attr("href", data["starships"]);
     $("#vehicles_link").attr("href", data["vehicles"]);
-
-    // ["films"] = data["films"];
-    // ["people"] = data["people"];
-    // ["planets"] = data["planets"];
-    // ["species"] = data["species"];
-    // ["starships"] = data["starships"];
-    // ["vehicles"] = data["vehicles"];
 };
 
 $.get("https://swapi.co/api/", update);
